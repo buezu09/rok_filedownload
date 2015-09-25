@@ -1,0 +1,85 @@
+
+plugin.tx_rokfiledownload {
+	view {
+		templateRootPath = {$plugin.tx_rokfiledownload.view.templateRootPath}
+		partialRootPath = {$plugin.tx_rokfiledownload.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_rokfiledownload.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_rokfiledownload.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	settings {
+		displayList {
+			previewimage {
+				maxWidth = 380
+				minWidth = 380
+				width = 380c
+				minHeight = 380
+				maxHeight = 380
+				height = 380c
+			}
+		}
+		displaySingle {
+			previewimage {
+				maxWidth = 195
+				minWidth = 195
+				width = 195c
+				minHeight = 195
+				maxHeight = 195
+				height = 195c
+			}
+
+			images {
+				maxWidth = 195
+				minWidth = 195
+				width = 195c
+				minHeight = 195
+				maxHeight = 195
+				height = 195c			
+			}
+
+			lightboximage {
+				maxWidth = 800
+				maxHeight = 650
+			}
+		}
+	}
+}
+
+plugin.tx_rokfiledownload._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-rok-filedownload table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-rok-filedownload table th {
+		font-weight:bold;
+	}
+
+	.tx-rok-filedownload table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)

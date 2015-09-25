@@ -1,0 +1,63 @@
+{namespace m=TYPO3\RokFiledownload\ViewHelpers}
+
+
+<div class="tx_rokfiledownload" >
+	<div class="container">
+		<div class="row">
+
+			<h1>{galery.title}</h1>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<f:if condition="{galery.description}">
+						<div class="description">
+							<f:format.html>{galery.description}</f:format.html>
+						</div>
+					</f:if>
+				</div>
+			</div>
+				
+			<div class="images row">
+
+				<div class="col-sm-2 image-item">
+					<a href="{f:uri.image(src:galery.previewimage.uid, maxWidth:settings.displaySingle.lightboximage.maxWidth, maxHeight:settings.displaySingle.lightboximage.maxHeight, treatIdAsReference:1)}" class="lightbox single-thumb">
+						<img src="{f:uri.image(src:galery.previewimage.uid, maxWidth:settings.displaySingle.previewimage.maxWidth, minWidth:settings.displaySingle.previewimage.minWidth, width:settings.displaySingle.previewimage.width, minHeight:settings.displaySingle.previewimage.minHeight, maxHeight: settings.displaySingle.previewimage.minHeight, height:settings.displaySingle.previewimage.height, treatIdAsReference:1)}" alt="" />
+					</a>
+
+					<div class="meta-data">
+						<p class="image-info">{galery.previewimage.originalResource.properties.width} x {galery.previewimage.originalResource.properties.height}</p>
+					</div>
+
+					<div class="download-wrapper">
+						<div class="download-content">
+							<a href="{f:uri.image(src:galery.previewimage.uid, treatIdAsReference:1)}" download="{galery.previewimage.uid.originalResource.originalFile.name}" class="btn btn-default">Download</a>
+						</div>
+					</div>
+				</div>
+
+				<m:Paginate objects="{galery.images}" as="paginatedImages" configuration="{itemsPerPage: 23, insertAbove: 0, insertBelow: 1}">
+
+					<f:for each="{paginatedImages}" as="image">
+						<div class="col-sm-2 image-item">
+							<a href="{f:uri.image(src:image.uid, maxWidth:settings.displaySingle.lightboximage.maxWidth, maxHeight:settings.displaySingle.lightboximage.maxHeight, treatIdAsReference:1)}" class="lightbox single-thumb">
+								<img src="{f:uri.image(src:image.uid, maxWidth:settings.displaySingle.images.maxWidth, minWidth:settings.displaySingle.images.minWidth, width:settings.displaySingle.images.width, minHeight:settings.displaySingle.images.minHeight, maxHeight: settings.displaySingle.images.minHeight, height:settings.displaySingle.images.height, treatIdAsReference:1)}" alt="" />
+							</a>
+
+							<div class="meta-data">
+								<p class="image-info">{image.originalResource.properties.width} x {image.originalResource.properties.height}</p>
+							</div>
+							
+							<div class="download-wrapper">
+								<div class="download-content">
+									<a href="{f:uri.image(src:image.uid, treatIdAsReference:1)}" download="{image.originalResource.originalFile.name}" class="btn btn-default">Download</a>
+								</div>
+							</div>
+						</div>
+					</f:for>
+
+				</m:Paginate>
+
+			</div>
+		</div>
+	</div>
+</div>

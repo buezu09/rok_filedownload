@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-04-27T16:52:50Z" product-name="rok_filedownload">
+		<header/>
+		<body>
+			<trans-unit id="tx_rokfiledownload_domain_model_galery">
+				<source>Galery</source>
+			</trans-unit>
+			<trans-unit id="tx_rokfiledownload_domain_model_galery.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_rokfiledownload_domain_model_galery.previewimage">
+				<source>Previewimage</source>
+			</trans-unit>
+			<trans-unit id="tx_rokfiledownload_domain_model_galery.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_rokfiledownload_domain_model_galery.back">
+				<source>Back to List</source>
+			</trans-unit>
+			<trans-unit id="pagination_first">
+				<source>&lt;&lt;</source>
+			</trans-unit>
+			<trans-unit id="pagination_previous">
+				<source>&lt;</source>
+			</trans-unit>
+			<trans-unit id="pagination_next">
+				<source>&gt;</source>
+			</trans-unit>
+			<trans-unit id="pagination_last">
+				<source>&gt;&gt;</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
